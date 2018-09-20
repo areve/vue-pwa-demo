@@ -49,6 +49,7 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
 * add edit and done buttons to notes
 * add save to localStorage
 * add icons with font-awesome
+* `yarn build` and push to github
 
 ## Build Setup
 
