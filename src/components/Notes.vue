@@ -4,10 +4,26 @@
     <p>Here are my notes</p>
     <ul>
       <li v-for="note in notes" :key="note.id">
-        <h2>{{note.title}}</h2>
-        <p>{{note.body}}</p>
-        <div>
-          <button @click="remove(note)">Remove</button>
+        <div v-if="!note.isEditing">
+          <h2>{{note.title}}</h2>
+          <p>{{note.body}}</p>
+          <div>
+            <button @click="edit(note)">Edit</button>
+          </div>
+        </div>
+        <div v-if="note.isEditing">
+          <fieldset>
+            <label>Title</label>
+            <input type="text" v-model="note.title">
+          </fieldset>
+          <fieldset>
+            <label>Body</label>
+            <textarea type="text" v-model="note.body" />
+          </fieldset>
+          <div>
+            <button @click="remove(note)">Remove</button>
+            <button @click="cancelEdit(note)">Cancel</button>
+          </div>
         </div>
       </li>
     </ul>
@@ -49,6 +65,16 @@ export default {
     remove (note) {
       const index = this.notes.indexOf(note)
       this.notes.splice(index, 1)
+    },
+    edit (note) {
+      note.isEditing = true
+      const index = this.notes.indexOf(note)
+      this.notes.splice(index, 1, note)
+    },
+    cancelEdit (note) {
+      note.isEditing = false
+      const index = this.notes.indexOf(note)
+      this.notes.splice(index, 1, note)
     }
   }
 }
