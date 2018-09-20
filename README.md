@@ -25,6 +25,7 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
   * test that `yarn build` creates files in `dist` to update the dist folder at any time run this
   * run `npm install -g serve` to get a server then serve the built site with `serve dist`
   * update the path in `manifest.json`  `"start_url": "/vue-pwa-demo/dist/index.html",` and similarly for the icons.
+  * move `index.html` to `src/index.html` and update the references in `*.conf.js`
   * push to git and see if the demo site is working
 
 ## Testing the PWA app
@@ -32,7 +33,9 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
 * in chrome browse to the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html).
 * F12 to open tools, open Network tab
 * Ctrl+F5 check for 404 errors
-* open the Audit tab, check for  
+* open the Audit tab, check for any warnings, it is not too hard to get 100 for everything.
+
+
 
 ## Build Setup
 
