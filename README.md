@@ -20,8 +20,11 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
 `*.conf.js`
   * add `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picnic/6.5.0/plugins.min.css">` to `index.html`
   * in `webpack.prod.conf.js` add `publicPath: '/vue-pwa-demo/dist',`
+  * remove `/dist/` from `.gitignore`
   * test that `yarn build` creates files in `dist`
   * run `npm install -g serve` to get a server then serve the built site with `serve dist`
+
+
 
 
 ## Build Setup
