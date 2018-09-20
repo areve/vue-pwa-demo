@@ -21,11 +21,17 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
   * add `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picnic/6.5.0/plugins.min.css">` to `index.html`
   * in `webpack.prod.conf.js` add `publicPath: '/vue-pwa-demo/dist',`
   * remove `/dist/` from `.gitignore`
-  * test that `yarn build` creates files in `dist`
+  * test that `yarn build` creates files in `dist` to update the dist folder at any time run this
   * run `npm install -g serve` to get a server then serve the built site with `serve dist`
+  * update the path in `manifest.json`  `"start_url": "/vue-pwa-demo/dist/index.html",` 
+  * push to git and see if the demo site is working
 
+## Testing the PWA app
 
-
+* in chrome browse to the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html).
+* F12 to open tools, open Network tab
+* Ctrl+F5 check for 404 errors
+* open the Audit tab, check for  
 
 ## Build Setup
 
