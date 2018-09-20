@@ -46,7 +46,9 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
 * add a button to add a new note
 * add a remove button to each note
 * add input and textarea
-* add edit and cancel buttons to notes
+* add edit and done buttons to notes
+* add save to localStorage
+* add icons
 
 ## Build Setup
 

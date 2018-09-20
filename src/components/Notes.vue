@@ -21,8 +21,8 @@
             <textarea type="text" v-model="note.body" />
           </fieldset>
           <div>
+            <button @click="done(note)">Done</button>
             <button @click="remove(note)">Remove</button>
-            <button @click="cancelEdit(note)">Cancel</button>
           </div>
         </div>
       </li>
@@ -38,20 +38,13 @@ export default {
   name: 'home',
   data () {
     return {
-      nextNoteId: 3,
-      notes: [
-        {
-          id: 1,
-          title: 'note1',
-          body: 'note body1'
-        },
-        {
-          id: 2,
-          title: 'note2',
-          body: 'note body2'
-        }
-      ]
+      nextNoteId: 1,
+      notes: []
     }
+  },
+  mounted () {
+    this.notes = JSON.parse(localStorage.getItem('notes')) || []
+    this.nextNoteId = JSON.parse(localStorage.getItem('nextNoteId')) || 1
   },
   methods: {
     add () {
@@ -61,20 +54,27 @@ export default {
         title: 'new note ' + id,
         body: 'new note ' + id
       })
+      this.save()
     },
     remove (note) {
       const index = this.notes.indexOf(note)
       this.notes.splice(index, 1)
+      this.save()
     },
     edit (note) {
       note.isEditing = true
       const index = this.notes.indexOf(note)
       this.notes.splice(index, 1, note)
     },
-    cancelEdit (note) {
+    done (note) {
       note.isEditing = false
       const index = this.notes.indexOf(note)
       this.notes.splice(index, 1, note)
+      this.save()
+    },
+    save () {
+      localStorage.setItem('notes', JSON.stringify(this.notes))
+      localStorage.setItem('nextNoteId', JSON.stringify(this.nextNoteId))
     }
   }
 }
