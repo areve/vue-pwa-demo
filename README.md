@@ -28,13 +28,23 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
   * move `index.html` to `src/index.html` and update the references in `*.conf.js`
   * push to git and see if the demo site is working
 
-## Testing the PWA app
+### Testing the PWA app
 
 * in chrome browse to the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html).
 * F12 to open tools, open Network tab
 * Ctrl+F5 check for 404 errors
 * open the Audit tab, check for any warnings, it is not too hard to get 100 for everything.
 
+### Add more pages to the app
+
+* get `yarn dev` is running
+* rename `Hello.vue` to `Home.vue` and find its references and update them too.
+* copy `Home.vue` to `Notes.vue`, add routes and links in the header, add somestyles.
+* on `Notes.vue` add a hardcoded list of notes in html.
+* add some styles for the note.
+* make the notes render from an array using `v-for`
+* add a button to add a new note
+* add a remove button to each note
 
 
 ## Build Setup
