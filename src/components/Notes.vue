@@ -8,7 +8,7 @@
           <h2>{{note.title}}</h2>
           <p>{{note.body}}</p>
           <div>
-            <button @click="edit(note)">Edit</button>
+            <button @click="edit(note)"><i class="far fa-edit"></i> Edit</button>
           </div>
         </div>
         <div v-if="note.isEditing">
@@ -21,14 +21,14 @@
             <textarea type="text" v-model="note.body" />
           </fieldset>
           <div>
-            <button @click="done(note)">Done</button>
-            <button @click="remove(note)">Remove</button>
+            <button @click="done(note)"><i class="far fa-check-circle"></i> Done</button>
+            <button @click="remove(note)"><i class="far fa-trash-alt"></i> Remove</button>
           </div>
         </div>
       </li>
     </ul>
     <div>
-      <button @click="add()">Add</button>
+      <button @click="add()"><i class="far fa-plus-square"></i> Add</button>
     </div>
   </section>
 </template>

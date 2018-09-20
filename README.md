@@ -48,7 +48,7 @@ See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
 * add input and textarea
 * add edit and done buttons to notes
 * add save to localStorage
-* add icons
+* add icons with font-awesome
 
 ## Build Setup
 
