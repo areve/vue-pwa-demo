@@ -22,7 +22,7 @@ export default {
 <style>
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 header {

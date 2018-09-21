@@ -7,7 +7,7 @@
 ### Setup https host
 Setup github pages hosted site, PWA's need valid https to work correctly.
 
-See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html)
+See the [Demo](https://areve.github.io/vue-pwa-demo/dist/index.html) or get the [source](https://github.com/areve/vue-pwa-demo) 
 
 ### Start with the vue pwa template
 
